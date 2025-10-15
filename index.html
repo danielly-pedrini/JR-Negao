@@ -1,0 +1,183 @@
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>JR Negão - Serviços Profissionais</title>
+  </head>
+  <body>
+    <!-- Árvores decorativas -->
+    <div class="tree-decoration tree-left"></div>
+    <div class="tree-decoration tree-right"></div>
+
+    <header>
+      <h1>JR Negão</h1>
+      <p class="subtitle">Serviços Profissionais de Qualidade</p>
+      <button class="admin-btn" onclick="openAdminModal()">
+        🔐 Área Admin
+      </button>
+    </header>
+
+    <div class="container">
+      <section class="services">
+        <div class="service-card">
+          <h3>🏗️ Alvenaria</h3>
+          <p>
+            Serviços completos de construção e reformas estruturais com
+            qualidade e segurança.
+          </p>
+        </div>
+        <div class="service-card">
+          <h3>🏠 Pintura de Imóvel</h3>
+          <p>
+            Pintura residencial e comercial com acabamento profissional e
+            materiais de primeira linha.
+          </p>
+        </div>
+        <div class="service-card">
+          <h3>🐛 Dedetização</h3>
+          <p>Controle de pragas eficiente e seguro para sua casa ou empresa.</p>
+        </div>
+        <div class="service-card">
+          <h3>🌿 Limpeza de Terrenos</h3>
+          <p>
+            Limpeza completa: roçada de grama, rastelo e manutenção de áreas
+            externas.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <div class="carousel-section">
+      <h2>Nossos Trabalhos</h2>
+      <div class="carousel">
+        <div class="carousel-inner" id="carouselInner">
+          <div class="carousel-item">
+            <p class="no-images">
+              Adicione fotos através da Área Administrativa
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h2>Solicite seu Orçamento</h2>
+      <form id="orcamentoForm">
+        <div class="form-group">
+          <label for="nome">Nome Completo *</label>
+          <input type="text" id="nome" name="nome" required />
+        </div>
+
+        <div class="form-group">
+          <label for="telefone">Telefone para Contato *</label>
+          <input
+            type="tel"
+            id="telefone"
+            name="telefone"
+            placeholder="(15) 99999-9999"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="servico">Tipo de Serviço *</label>
+          <select id="servico" name="servico" required>
+            <option value="">Selecione um serviço</option>
+            <option value="Alvenaria">Alvenaria</option>
+            <option value="Pintura de Imóvel">Pintura de Imóvel</option>
+            <option value="Dedetização">Dedetização</option>
+            <option value="Limpeza de Terrenos">Limpeza de Terrenos</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="descricao">Descrição do Serviço *</label>
+          <textarea
+            id="descricao"
+            name="descricao"
+            placeholder="Descreva detalhes sobre o serviço que você precisa..."
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">
+          Enviar Solicitação via WhatsApp
+        </button>
+      </form>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 JR Negão - Todos os direitos reservados</p>
+      <p>Contato: (15) 99267-8046</p>
+    </footer>
+
+    <a
+      href="https://wa.me/5515992678046"
+      target="_blank"
+      class="whatsapp-float"
+      title="Fale conosco no WhatsApp"
+    >
+      💬
+    </a>
+
+    <!-- Modal Área Administrativa -->
+    <div id="adminModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeAdminModal()">&times;</span>
+
+        <!-- Login -->
+        <div id="loginSection" class="login-section">
+          <div class="admin-header">
+            <h2>🔐 Login Administrativo</h2>
+          </div>
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="adminPassword">Senha de Acesso</label>
+              <input
+                type="password"
+                id="adminPassword"
+                placeholder="Digite a senha"
+                required
+              />
+            </div>
+            <button type="submit" class="btn-submit">Entrar</button>
+          </form>
+          <p style="text-align: center; margin-top: 1rem; color: #666">
+            Senha padrão: <strong>admin123</strong>
+          </p>
+        </div>
+
+        <!-- Área Administrativa -->
+        <div id="adminContent" class="admin-content">
+          <div class="admin-header">
+            <h2>📸 Gerenciar Fotos do Carrossel</h2>
+            
+          </div>
+
+          <!-- Upload de Fotos -->
+          <div class="upload-section">
+            <h3>📤 Adicionar Novas Fotos</h3>
+            <div class="file-input-wrapper">
+              <label for="fileInput" class="file-input-label">
+                📁 Escolher Imagens
+              </label>
+              <input type="file" id="fileInput" accept="image/*" multiple />
+            </div>
+            <div id="previewContainer" class="preview-container"></div>
+            <button onclick="uploadImages()" class="btn-upload">
+              ✓ Adicionar ao Carrossel
+            </button>
+          </div>
+
+          <!-- Galeria -->
+          <div class="gallery-section">
+            <h3>🖼️ Fotos Atuais no Carrossel</h3>
+            <div id="galleryGrid" class="gallery-grid"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
