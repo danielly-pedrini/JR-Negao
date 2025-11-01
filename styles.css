@@ -169,13 +169,13 @@
         }
 
         .carousel-label.antes {
-            background: rgba(239, 83, 80, 0.15);
-            color: #c62828;
+            background: #21a04b56;
+            color: #117c35d3;
         }
 
         .carousel-label.depois {
-            background: rgba(102, 187, 106, 0.15);
-            color: #2e7d32;
+            background: #21a04b56;
+            color: #1db825;
         }
 
         .carousel {
