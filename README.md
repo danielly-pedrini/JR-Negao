@@ -2,8 +2,8 @@
 
 Site profissional para empresa de serviços de alvenaria, pintura, dedetização e limpeza de terrenos, com sistema de galeria de fotos Antes & Depois e integração com WhatsApp.
 
-<img src="./assets/readme1" alt="imagem do readme">
-<img src="./assets/readme2" alt="imagem do readme">
+<img src="./assets/readme2.png" alt="imagem do readme">
+<img src="./assets/readme2.png" alt="imagem do readme">
 
 ## ✨ Características
 
